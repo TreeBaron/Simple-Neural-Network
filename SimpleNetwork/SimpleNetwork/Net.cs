@@ -73,9 +73,9 @@ namespace SimpleNetwork
         public void Train(List<Simulant> trainingData, double acceptableScore)
         {
             Random r = new Random(17);
+            var layers = Layers[1..];
             while (true)
             {
-                var layers = Layers[0..];
                 foreach (var layer in layers)
                 {
                     foreach (var node in layer.Nodes)
